@@ -10,17 +10,22 @@ import java.util.Scanner;
 public class Exercicio002 {
 
     public static void main(String[] args) {
+        // define o leitor como scanner
         Scanner leitor = new Scanner(System.in);
 
+        // recebe o valor em reais
         System.out.println("Informe o valor em reais:");
         double valorReais = leitor.nextDouble();
 
+        // calcula as conversões
         double dolar = valorReais / 5.17;
         double Euro = valorReais / 6.14;
         double Peso = valorReais / 0.07;
 
+        // seta a formatação de texto para mostrar apenas 2 casas decimais
         String formato = "%.2f";
 
+        // mostra a lista de valores convertidos
         System.out.println("Os valores convertidos são: ");
         System.out.println("Dolar: " + String.format(formato, dolar) + " dolares");
         System.out.println("Euro: " + String.format(formato, Euro) + " euros");

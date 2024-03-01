@@ -13,23 +13,30 @@ import java.util.Scanner;
 public class ExercicioExemplo001 {
 
     public static void main(String[] args) {
+        // define o leitor como scanner
         Scanner leitor = new Scanner(System.in);
 
+        // recebe o valor da matricula e pula uma linha para evitar a leitura errada do proximo leitor
         System.out.println("Informe sua Matricula: ");
         int matricula = leitor.nextInt();
         leitor.nextLine();
 
+        // recebe o valor do nome
         System.out.println("Informe seu Nome: ");
         String Nome = leitor.nextLine();
 
+        // recebe o valor da primeira nota
         System.out.println("Informe sua primeira nota: ");
         int nota1 = leitor.nextInt();
 
+        // recebe o valor da segunda nota
         System.out.println("Informe sua segunda nota: ");
         int nota2 = leitor.nextInt();
 
+        // calcula a media a partir da primeira e da segunda nota
         int media = (nota1 + nota2) / 2;
 
+        // condicional para mostrar se foi aprovado ou nao a partir da media das notas
         if (media >= 6) {
 
             System.out.println("- - - - - - - - - - - - -");
