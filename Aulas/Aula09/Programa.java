@@ -1,3 +1,6 @@
+import br.edu.up.Carro;
+import br.edu.up.Pessoa;
+
 public class Programa {
 
     // para acessar o valor do objeto se usa um metodo dele e nao a definição de valores, tudo para proteger a informação!
@@ -45,6 +48,14 @@ public class Programa {
         System.out.println("Modelo: " + bmw.getModelo());
         System.out.println("Velocidade: " + bmw.getVelocidade());
         System.out.println("Velocidade: " + bmw.getVelocidadeMaxima());
+
+        Pessoa p = new Pessoa();
+        Pessoa p2 = new Pessoa("Joana");
+
+        p.setNome("João");
+        
+        System.out.println("Nome: " + p.getNome());
+        System.out.println("Nome: " + p2.getNome());
     }
 
 }

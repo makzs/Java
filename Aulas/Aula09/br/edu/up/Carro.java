@@ -1,3 +1,4 @@
+package br.edu.up;
 public class Carro extends Veiculo{
 
     // enumerador
