@@ -1,31 +1,34 @@
 package Aulas.Heranças;
 
-public class Bike {
-    private String cor;
-    private int velocidade;
+// hierarquia : classe -> abstract class -> interface
+public abstract class Bike {
+    protected String cor;
+    protected int velocidade;
+    protected int velocidadeMaxima;
 
     
-    public Bike() {
+    /*public Bike() {
         
-    }
+    }*/
 
     public int getVelocidade() {
         return velocidade;
     }
 
+    // o construtor nao é herdado para as classes filhas
+    public Bike(String cor, int velocidadeMaxima) {
+        this.cor = cor;
+        this.velocidadeMaxima = velocidadeMaxima;
+    }
+    
     public void setVelocidade(int velocidade) {
         this.velocidade = velocidade;
     }
 
-    public Bike(String cor) {
-        this.cor = cor;
-    }
-
-
     // sobreescrever o metodo (dar a possibilidade de ser herdada para as classes filhas)
     @Override
     public String toString() {
-        return "Bike [cor=" + cor + ", velocidade=" + velocidade + "]";
+        return "Bike [cor=" + cor + ", velocidade=" + velocidade + ", velocidadeMaxima=" + velocidadeMaxima + "]";
     }
 
     public String getCor() {
