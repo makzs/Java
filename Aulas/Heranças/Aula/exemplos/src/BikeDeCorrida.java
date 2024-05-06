@@ -1,10 +1,13 @@
-package Aulas.Heranças;
-
 public class BikeDeCorrida extends Bike{
 
     public BikeDeCorrida(String cor, int velocidadeMaxima){
         // super é a chamada do construtor da classe mae
         super(cor, velocidadeMaxima);
+    }
+
+    // utiliza o metodo da interface para definir a capacidade de carga (implementação da interface transporte)
+    public int getCapacidadeCarga(){
+        return 60;
     }
 
     @Override

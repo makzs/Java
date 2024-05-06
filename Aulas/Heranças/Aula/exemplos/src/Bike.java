@@ -1,7 +1,6 @@
-package Aulas.Heranças;
-
 // hierarquia : classe -> abstract class -> interface
-public abstract class Bike {
+// protected é "50% protegido"
+public abstract class Bike implements Transporte{
     protected String cor;
     protected int velocidade;
     protected int velocidadeMaxima;
