@@ -13,6 +13,8 @@ public class App {
         // defino o arquivo de texto que desejo
         File arquivo = new File(
                 "C:\\Users\\autologon\\Desktop\\teste\\Java\\Aulas\\LeituraGravaçãoTexto\\ExemploArquivos\\src\\Clientes.csv");
+            List<Cliente> listaClientes = new ArrayList<>();
+
         try { // tentar rodar
 
             Scanner leitor = new Scanner(arquivo);
@@ -20,7 +22,6 @@ public class App {
             // descarta a linha do cabecario
             leitor.nextLine();
 
-            List<Cliente> listaClientes = new ArrayList<>();
 
             // enquanto tiver linhas no arquivo
             while (leitor.hasNextLine()) {
@@ -49,8 +50,8 @@ public class App {
             FileWriter arquivogravar = new FileWriter("C:\\Users\\autologon\\Desktop\\teste\\Java\\Aulas\\LeituraGravaçãoTexto\\ExemploArquivos\\src\\Clientes.csv");
             PrintWriter gravador = new PrintWriter(arquivogravar);
 
-            for (Cliente cliente : listaClientes) {
-                cliente.toCSV();
+            for (Cliente c : listaClientes) {
+                c.toCSV();
             }
             gravador.close();
         } catch (IOException e) {
